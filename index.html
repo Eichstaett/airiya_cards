@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Airiya Alphabet Cards – Chinese Watercolor Art for Little Learners</title>
+<meta name="description" content="26 hand-crafted Chinese watercolor alphabet cards. Print-ready, frame-worthy, designed for curious little minds."/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --gold:#C9A96E;--gold-d:#8B6B2E;--gold-l:#E8D5A3;
+  --cream:#FDFBF7;--cream2:#F7F1E6;
+  --ink:#1A1A1A;--ink-l:#4A4035;
+}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);font-family:'Cormorant Garamond',serif;color:var(--ink);overflow-x:hidden;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--cream2);}
+::-webkit-scrollbar-thumb{background:var(--gold-l);border-radius:3px;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+@keyframes shimmer{0%,100%{opacity:.4;}50%{opacity:.9;}}
+.fu{animation:fadeUp .9s ease forwards;}
+.d1{animation-delay:.18s;opacity:0;}
+.d2{animation-delay:.36s;opacity:0;}
+.d3{animation-delay:.52s;opacity:0;}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:13px 40px;display:flex;align-items:center;justify-content:space-between;transition:all .32s ease;}
+nav.on{background:rgba(253,251,247,.93);backdrop-filter:blur(14px);border-bottom:.5px solid var(--gold-l);}
+.nb{display:flex;align-items:center;gap:10px;}
+.nb-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.04em;}
+.nb-sub{font-size:9px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;}
+.nl{display:flex;gap:22px;align-items:center;}
+.nl-link{background:none;border:none;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--ink-l);letter-spacing:.07em;}
+.btn-p{padding:9px 22px;border-radius:50px;background:linear-gradient(135deg,var(--gold),var(--gold-d));border:none;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:600;cursor:pointer;letter-spacing:.06em;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 14px #C9A96E44;}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 24px #C9A96E55;}
+.btn-g{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;border-radius:50px;border:1px solid var(--gold);background:transparent;cursor:pointer;font-family:'Cormorant Garamond',serif;font-size:14px;color:var(--gold-d);letter-spacing:.07em;transition:background .2s;}
+.btn-g:hover{background:var(--gold-l);}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:110px 24px 70px;position:relative;overflow:hidden;text-align:center;}
+.blob-bg{position:absolute;inset:0;pointer-events:none;width:100%;height:100%;}
+.h-eye{display:flex;align-items:center;gap:14px;margin-bottom:28px;}
+.h-rule{width:48px;height:.5px;background:var(--gold);}
+.h-eye-t{font-size:11px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;}
+h1{font-family:'Playfair Display',serif;font-size:clamp(38px,7vw,76px);font-weight:700;color:var(--ink);line-height:1.1;margin-bottom:22px;}
+h1 em{color:var(--gold);font-style:italic;}
+.h-sub{font-size:clamp(15px,2vw,18px);color:var(--ink-l);line-height:1.8;font-weight:300;max-width:490px;margin:0 auto 38px;}
+.h-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap;margin-bottom:60px;}
+
+/* hero card strip */
+.hero-strip{display:flex;gap:14px;justify-content:center;align-items:flex-end;flex-wrap:wrap;animation:float 4s ease-in-out infinite;}
+.h-card{border-radius:10px;overflow:hidden;box-shadow:0 6px 26px rgba(0,0,0,.13);border:1px solid #E8D5A366;transition:transform .25s;width:90px;}
+.h-card img{width:100%;display:block;}
+.h-card:hover{transform:translateY(-5px) scale(1.04);}
+.strip-label{margin-top:15px;font-size:11px;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;}
+
+.scroll-c{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;animation:shimmer 2.2s ease infinite;}
+.scroll-l{width:.5px;height:36px;background:var(--gold);opacity:.5;}
+.scroll-t{font-size:9px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;}
+
+/* ── DIVIDER ── */
+.wv{text-align:center;padding:8px 0 24px;}
+
+/* ── GALLERY ── */
+.gal-sec{padding:60px 24px 80px;max-width:1120px;margin:0 auto;}
+.sec-eye{font-size:11px;letter-spacing:.25em;color:var(--gold);text-transform:uppercase;margin-bottom:12px;}
+h2.sec-t{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,44px);font-weight:700;color:var(--ink);margin-bottom:13px;}
+.sec-sub{color:var(--ink-l);font-size:16px;max-width:440px;margin:0 auto;line-height:1.75;}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px;margin-top:44px;}
+.g-card{border-radius:10px;overflow:hidden;cursor:pointer;border:1px solid #E8D5A366;box-shadow:0 2px 10px rgba(0,0,0,.06);transition:all .25s;background:#fff;}
+.g-card:hover{transform:translateY(-5px) scale(1.03);box-shadow:0 10px 28px rgba(201,169,110,.25);}
+.g-card img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover;}
+.g-lbl{padding:5px 0 6px;text-align:center;font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:var(--gold-d);background:var(--cream);}
+
+/* ── TRUST ── */
+.trust{background:var(--cream2);padding:64px 24px;border-top:.5px solid var(--gold-l);border-bottom:.5px solid var(--gold-l);}
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;max-width:900px;margin:38px auto 0;}
+.t-card{background:var(--cream);border-radius:13px;border:.5px solid var(--gold-l);padding:24px 20px;box-shadow:0 2px 10px #C9A96E11;}
+.t-icon{font-size:26px;margin-bottom:12px;}
+.t-title{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--ink);margin-bottom:7px;}
+.t-sub{font-size:13px;color:var(--ink-l);line-height:1.7;}
+
+/* ── CTA ── */
+.cta{padding:80px 24px;text-align:center;position:relative;overflow:hidden;}
+.cta h2{font-family:'Playfair Display',serif;font-size:clamp(26px,5vw,46px);font-weight:700;color:var(--ink);margin:20px 0 14px;position:relative;z-index:1;}
+.cta-sub{color:var(--ink-l);font-size:16px;max-width:390px;margin:0 auto 34px;line-height:1.75;position:relative;z-index:1;}
+.cta-meta{margin-top:14px;font-size:13px;color:var(--ink-l);}
+
+/* ── FOOTER ── */
+footer{padding:22px 40px;border-top:.5px solid var(--gold-l);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.f-brand{display:flex;align-items:center;gap:8px;font-family:'Playfair Display',serif;font-size:13px;color:var(--ink-l);}
+.f-copy{font-size:12px;color:var(--ink-l);letter-spacing:.05em;}
+
+/* ── MODAL ── */
+.mbg{position:fixed;inset:0;background:rgba(26,26,26,.56);backdrop-filter:blur(5px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px;}
+.mbg.open{display:flex;}
+.mbox{background:var(--cream);border-radius:20px;padding:38px 34px;max-width:420px;width:100%;border:1px solid var(--gold-l);box-shadow:0 24px 64px rgba(26,26,26,.18);text-align:center;}
+.m-title{font-family:'Playfair Display',serif;font-size:25px;font-weight:700;color:var(--ink);margin-top:14px;margin-bottom:5px;}
+.m-sub{color:var(--gold-d);font-size:13px;letter-spacing:.12em;margin-bottom:20px;}
+.m-preview{display:flex;gap:6px;justify-content:center;margin-bottom:18px;}
+.m-preview img{width:52px;border-radius:6px;border:1px solid #E8D5A366;box-shadow:0 2px 8px rgba(0,0,0,.1);}
+.m-items{background:var(--cream2);border-radius:11px;padding:13px 16px;margin-bottom:20px;text-align:left;}
+.m-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:.5px solid var(--gold-l);font-size:13px;}
+.m-row:last-child{border:none;}
+.m-row span:last-child{color:var(--ink-l);}
+.m-price{margin-bottom:0;}
+.m-price strong{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold-d);}
+.m-price span{color:var(--ink-l);font-size:13px;margin-left:7px;}
+.btn-gum{width:100%;padding:14px;border-radius:10px;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:var(--cream);border:none;font-family:'Playfair Display',serif;font-size:16px;font-weight:600;cursor:pointer;letter-spacing:.05em;box-shadow:0 4px 16px #C9A96E55;margin-top:16px;transition:transform .2s;}
+.btn-gum:hover{transform:translateY(-1px);}
+.m-sec{color:var(--ink-l);font-size:12px;margin-top:9px;}
+.m-cls{margin-top:10px;background:none;border:none;color:var(--ink-l);cursor:pointer;font-size:13px;font-family:'Cormorant Garamond',serif;}
+.f-input{width:100%;padding:12px 14px;border-radius:8px;border:1px solid var(--gold-l);background:var(--cream2);font-family:'Cormorant Garamond',serif;font-size:15px;color:var(--ink);outline:none;margin-bottom:11px;}
+.f-input:focus{border-color:var(--gold);}
+
+/* responsive */
+@media(max-width:600px){
+  nav{padding:12px 20px;}
+  .nl-link{display:none;}
+  .gal-grid{grid-template-columns:repeat(auto-fill,minmax(85px,1fr));gap:9px;}
+  .h-card{width:72px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nb">
+    <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+      <ellipse cx="50" cy="62" rx="28" ry="22" fill="#E8D5A3" opacity=".6"/>
+      <circle cx="50" cy="50" r="18" fill="#F7F1E6"/>
+      <circle cx="50" cy="50" r="15" fill="none" stroke="#C9A96E" stroke-width="1.2"/>
+      <path d="M50 18 L54 38 L50 36 L46 38 Z" fill="#C9A96E"/>
+      <circle cx="43" cy="47" r="2.5" fill="#4A4035"/>
+      <path d="M28 58 Q22 68 30 72 Q25 62 35 65" fill="#E8D5A3"/>
+      <path d="M72 58 Q78 68 70 72 Q75 62 65 65" fill="#E8D5A3"/>
+      <path d="M50 36 Q38 28 34 16 Q42 22 46 18" fill="#C9A96E" opacity=".7"/>
+    </svg>
+    <div>
+      <div class="nb-name">Airiya</div>
+      <div class="nb-sub">Kids · Alphabet Cards</div>
+    </div>
+  </div>
+  <div class="nl">
+    <button class="nl-link" onclick="document.getElementById('gal').scrollIntoView({behavior:'smooth'})">Gallery</button>
+    <button class="btn-p" onclick="openM('buy')">Get the Pack</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="blob-bg" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="8%" cy="20%" rx="260" ry="170" fill="#C9A96E" opacity=".11" style="filter:blur(34px)"/>
+    <ellipse cx="88%" cy="14%" rx="200" ry="140" fill="#8A9E8C" opacity=".10" style="filter:blur(28px)"/>
+    <ellipse cx="70%" cy="80%" rx="300" ry="190" fill="#C9A96E" opacity=".07" style="filter:blur(38px)"/>
+    <ellipse cx="12%" cy="84%" rx="220" ry="150" fill="#D4A574" opacity=".09" style="filter:blur(32px)"/>
+  </svg>
+
+  <div class="h-eye fu">
+    <div class="h-rule"></div>
+    <span class="h-eye-t">Chinese Watercolor Alphabet Art</span>
+    <div class="h-rule"></div>
+  </div>
+
+  <div class="fu d1">
+    <h1>Learn the Alphabet<br/><em>through Art</em></h1>
+    <p class="h-sub">26 hand-crafted cards blending classical Chinese illustration with early childhood learning. Beauty and education, inseparable.</p>
+    <div class="h-btns">
+      <button class="btn-p" onclick="openM('buy')" style="padding:14px 38px;font-size:16px;">Full Collection — $9.99</button>
+      <button class="btn-g" onclick="openM('free')">Free Sample A–E →</button>
+    </div>
+  </div>
+
+  <div class="fu d2">
+    <div class="hero-strip" id="heroStrip"></div>
+    <div class="strip-label">Preview · Cards A – E</div>
+  </div>
+
+  <div class="scroll-c">
+    <div class="scroll-l"></div>
+    <div class="scroll-t">Scroll</div>
+  </div>
+</section>
+
+<div class="wv">
+  <svg width="260" height="22" viewBox="0 0 260 22">
+    <path d="M0 11 Q65 3 130 11 Q195 19 260 11" stroke="#C9A96E" stroke-width=".8" fill="none" opacity=".55"/>
+  </svg>
+</div>
+
+<!-- GALLERY -->
+<section class="gal-sec" id="gal">
+  <div style="text-align:center">
+    <div class="sec-eye">Complete Collection</div>
+    <h2 class="sec-t">All 26 Cards</h2>
+    <p class="sec-sub">Each letter brought to life through classical Chinese watercolor — goldfish, lotus, cranes, and more.</p>
+  </div>
+  <div class="gal-grid" id="galGrid"></div>
+  <div style="text-align:center;margin-top:38px">
+    <button class="btn-p" onclick="openM('buy')" style="padding:14px 46px;font-size:16px;">Get All 26 Cards — $9.99</button>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div style="text-align:center;max-width:900px;margin:0 auto">
+    <div class="sec-eye">What's Included</div>
+    <h2 class="sec-t">Print-Ready. Frame-Worthy.</h2>
+    <div class="t-grid">
+      <div class="t-card"><div class="t-icon">🖨️</div><div class="t-title">4-per-Page PDF</div><div class="t-sub">A4/Letter layout with crop marks. Print at home on 300–350gsm card stock.</div></div>
+      <div class="t-card"><div class="t-icon">🖼️</div><div class="t-title">Art Poster PDF</div><div class="t-sub">8×10 inch full-bleed. Frame as nursery wall art — each card is exhibition quality.</div></div>
+      <div class="t-card"><div class="t-icon">📷</div><div class="t-title">26 JPEG Files</div><div class="t-sub">2400×3000px · 300 DPI · 4×6 ratio optimized for CVS, Walgreens & photo kiosks.</div></div>
+      <div class="t-card"><div class="t-icon">📖</div><div class="t-title">Instruction Guide</div><div class="t-sub">Paper weight guide, lamination tips, and 3 interactive alphabet learning games.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="cta">
+  <svg class="blob-bg" preserveAspectRatio="xMidYMid slice">
+    <ellipse cx="50%" cy="50%" rx="380" ry="240" fill="#C9A96E" opacity=".06" style="filter:blur(42px)"/>
+  </svg>
+  <svg width="54" height="54" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
+    <ellipse cx="50" cy="62" rx="28" ry="22" fill="#E8D5A3" opacity=".6"/>
+    <circle cx="50" cy="50" r="18" fill="#F7F1E6"/>
+    <circle cx="50" cy="50" r="15" fill="none" stroke="#C9A96E" stroke-width="1.2"/>
+    <path d="M50 18 L54 38 L50 36 L46 38 Z" fill="#C9A96E"/>
+    <circle cx="43" cy="47" r="2.5" fill="#4A4035"/>
+    <path d="M50 36 Q38 28 34 16 Q42 22 46 18" fill="#C9A96E" opacity=".7"/>
+  </svg>
+  <h2>Begin the Journey</h2>
+  <p class="cta-sub">A childhood shaped by beauty is a childhood that lasts a lifetime.</p>
+  <button class="btn-p" onclick="openM('buy')" style="padding:16px 54px;font-size:18px;position:relative;z-index:1">Get the Full Collection</button>
+  <div class="cta-meta">$9.99 · Instant Digital Download · 30-day guarantee</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-brand">
+    <svg width="20" height="20" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="16" fill="#F7F1E6"/>
+      <circle cx="50" cy="50" r="13" fill="none" stroke="#C9A96E" stroke-width="1.5"/>
+      <path d="M50 18 L54 36 L50 34 L46 36 Z" fill="#C9A96E"/>
+    </svg>
+    Airiya Kids
+  </div>
+  <div class="f-copy">© 2025 Airiya Kids · cards.airiya.org</div>
+</footer>
+
+<!-- PURCHASE MODAL -->
+<div class="mbg" id="m-buy" onclick="closeM('buy')">
+  <div class="mbox" onclick="event.stopPropagation()">
+    <svg width="52" height="52" viewBox="0 0 100 100" fill="none">
+      <ellipse cx="50" cy="62" rx="28" ry="22" fill="#E8D5A3" opacity=".6"/>
+      <circle cx="50" cy="50" r="18" fill="#F7F1E6"/>
+      <circle cx="50" cy="50" r="15" fill="none" stroke="#C9A96E" stroke-width="1.2"/>
+      <path d="M50 18 L54 38 L50 36 L46 38 Z" fill="#C9A96E"/>
+      <circle cx="43" cy="47" r="2.5" fill="#4A4035"/>
+      <path d="M50 36 Q38 28 34 16 Q42 22 46 18" fill="#C9A96E" opacity=".7"/>
+    </svg>
+    <div class="m-title">Airiya Alphabet Cards</div>
+    <div class="m-sub">COMPLETE COLLECTION · A – Z</div>
+    <div class="m-preview" id="modalPreview"></div>
+    <div class="m-items">
+      <div class="m-row"><span>26 Watercolor Art Cards</span><span>✓ Full A–Z</span></div>
+      <div class="m-row"><span>Print-Ready PDF Pack</span><span>✓ 4-up + full size</span></div>
+      <div class="m-row"><span>26 Individual JPEGs</span><span>✓ 300 DPI · 4×6</span></div>
+      <div class="m-row"><span>Instruction Guide</span><span>✓ Games & tips</span></div>
+    </div>
+    <div class="m-price"><strong>$9.99</strong><span>digital download</span></div>
+    <!-- 替换 href 为你的 Gumroad 产品链接 -->
+    <a href="https://airiyakids.gumroad.com/l/zggymf" target="_blank" style="text-decoration:none">
+      <button class="btn-gum">Purchase on Gumroad →</button>
+    </a>
+    <div class="m-sec">Secure checkout · Instant download · 30-day guarantee</div>
+    <button class="m-cls" onclick="closeM('buy')">✕ close</button>
+  </div>
+</div>
+
+<!-- FREE SAMPLE MODAL -->
+<div class="mbg" id="m-free" onclick="closeM('free')">
+  <div class="mbox" onclick="event.stopPropagation()" style="max-width:360px">
+    <div class="m-title" style="font-size:22px;margin-top:0">Free Sample Pack</div>
+    <div class="m-sub">CARDS A · B · C · D · E</div>
+    <div class="m-preview" id="freePreview"></div>
+    <input class="f-input" type="email" placeholder="Your email address"/>
+    <!-- 替换 action 为你的邮件服务地址（如 Mailchimp / ConvertKit） -->
+    <button class="btn-gum" style="border-radius:8px;font-size:15px;margin-top:0">Send My Free Cards →</button>
+    <button class="m-cls" onclick="closeM('free')">cancel</button>
+  </div>
+</div>
+
+<script>
+const BASE = 'https://raw.githubusercontent.com/Eichstaett/airiya_cards/main/';
+const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+function imgURL(l){ return BASE + 'Card_' + l + '_web.jpg'; }
+
+// Hero strip A-E
+const strip = document.getElementById('heroStrip');
+['A','B','C','D','E'].forEach(function(l,i){
+  const d = document.createElement('div');
+  d.className = 'h-card';
+  d.style.transform = 'rotate(' + ((i-2)*3) + 'deg)';
+  d.innerHTML = '<img src="' + imgURL(l) + '" alt="Card ' + l + '" loading="lazy"/>';
+  strip.appendChild(d);
+});
+
+// Gallery grid
+const grid = document.getElementById('galGrid');
+LETTERS.forEach(function(l){
+  const d = document.createElement('div');
+  d.className = 'g-card';
+  d.onclick = function(){ openM('buy'); };
+  d.innerHTML = '<img src="' + imgURL(l) + '" alt="Card ' + l + '" loading="lazy"/><div class="g-lbl">' + l + '</div>';
+  grid.appendChild(d);
+});
+
+// Modal previews
+function buildPreview(id, letters){
+  const c = document.getElementById(id);
+  letters.forEach(function(l){
+    const img = document.createElement('img');
+    img.src = imgURL(l);
+    img.alt = 'Card ' + l;
+    c.appendChild(img);
+  });
+}
+buildPreview('modalPreview', ['C','F','L','P','Z']);
+buildPreview('freePreview',  ['A','B','C','D','E']);
+
+// Nav scroll
+window.addEventListener('scroll', function(){
+  document.getElementById('nav').classList.toggle('on', window.scrollY > 55);
+});
+
+function openM(t){
+  document.getElementById('m-'+t).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeM(t){
+  document.getElementById('m-'+t).classList.remove('open');
+  document.body.style.overflow = '';
+}
+// ESC to close
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape'){
+    ['buy','free'].forEach(closeM);
+  }
+});
+</script>
+
+<script src="https://gumroad.com/js/gumroad.js"></script>
+
+</body>
+</html>
